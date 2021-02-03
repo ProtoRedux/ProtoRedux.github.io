@@ -1,21 +1,32 @@
-<doctype! html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scal=1">
   <title> Gloomblight </title>
-  <!-- Latest compiled and minified CSS -->
+  <!-- Latest compiled and minified CSS fom w3schools.com -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <!-- Personally created CSS -->
   <link rel="stylesheet" href="stylesheet.css">
-  <!-- Font Awsome Icons -->
+  <!-- Font Awsome Icons from fontawesome.com -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-  <!-- jQuery library -->
+  <!-- jQuery library from w3schools.com -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <!-- Popper JS -->
+  <!-- Popper JS from w3schools.com -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <!-- Latest compiled JavaScript -->
+  <!-- Latest compiled JavaScript from w3schools.com -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- JS for image carousel-->
+  <script>function switchStyle() {
+  if (document.getElementById('styleSwitch').checked) {
+    document.getElementById('gallery').classList.add("custom");
+    document.getElementById('exampleModal').classList.add("custom");
+  } else {
+    document.getElementById('gallery').classList.remove("custom");
+    document.getElementById('exampleModal').classList.remove("custom");
+  }
+}
+</script>
 </head>
 <body>
 <!-- Container for site strapline -->
@@ -24,8 +35,8 @@
   <small> Morbid & Mythical Art.</small>
 </div>
 <!-- Container for navigation bar-->
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark ">
-  <a class="navbar-brand" href="#">Gallery</a>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="#"><small>Gallery</small></a>
 <!-- button function for collapsible Navbar on small screens-->
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
   <span class="navbar-toggler-icon"></span>
@@ -34,38 +45,80 @@
   <!-- Links for navbar-->
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="index.html">Gallery</a>
+        <a class="nav-link" href="index.html"><small>Gallery</small></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="about.html"><small>About</small></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="contact.html">Contact</a>
+        <a class="nav-link" href="contact.html"><small>Follow Me</small></a>
+      </li>
       <li class="nav-item">
-        <a class="nav-link" href="Shop.html">Shop<a/>
+        <a class="nav-link" href="Shop.html"><small>Commissions</small></a>
       </li>
     </ul>
   </div>
   </nav>
-
-</body>
-
-<div class="container p-4 bg-warning">
-  <p class="text-center">Filling up space.</p>
-  <p class="text-center">Filling up space.</p>
-  <p class="text-center">Filling up space.</p>
-  <p class="text-center">Filling up space.</p>
-  <p class="text-center">Filling up space.</p>
-  <p class="text-center">Filling up space.</p>
-  <p class="text-center">Filling up space.</p>
-  <p class="text-center">Filling up space.</p>
-  <p class="text-center">Filling up space.</p>
-  <p class="text-center">Filling up space.</p>
-  <p class="text-center">Filling up space.</p>
-  <p class="text-center">Filling up space.</p>
+ <!-- Image Gallery Thumbnails -->
+<div class="row" id="gallery" data-toggle="modal" data-target="#exampleModal">
+  <div class="col-12 col-sm-6 col-lg-3">
+    <img class="w-50" src="imagelibrary/Thumbnails/Sofia_ChanT.png" alt="Sofia chan thumbnail" data-target="#carouselExample" data-slide-to="0">
+  </div>
+  <div class="col-12 col-sm-6 col-lg-3">
+    <img class="w-50" src="imagelibrary/Thumbnails/tsugumi_elegantT.png" alt="Elegant Tsugumi thumbnail" data-target="#carouselExample" data-slide-to="1">
+  </div>
+  <div class="col-12 col-sm-6 col-lg-3">
+    <img class="w-50" src="imagelibrary/Thumbnails/Scary_StareT.png" alt="A Scary Stare thumbnail" data-target="#carouselExample" data-slide-to="2">
+  </div>
+  <div class="col-12 col-sm-6 col-lg-3">
+    <img class="w-50" src="imagelibrary/Thumbnails/Silver_Full_BodyT.png" alt="Silvervale thumbnail" data-target="#carouselExample" data-slide-to="3">
+  </div>
 </div>
+  <!-- Modal -->
+<!--Bootstrap carousel inside a modal. credit:css-tricks.com-->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="carouselExample" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExample" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExample" data-slide-to="1"></li>
+            <li data-target="#carouselExample" data-slide-to="2"></li>
+            <li data-target="#carouselExample" data-slide-to="3"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="imagelibrary/Images/Sofia_Chan.png" alt="Sofia Chan">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="imagelibrary/Images/tsugumi_elegant.png" alt="Elegant Tsugumi">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="imagelibrary/Images/Scary_Stare.png" alt="A Scary Stare ">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="imagelibrary/Images/Silver_Full_Body.png" alt="Silvervale">
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid h-25"></div>
+
 <!--Footer with social media links-->
-<div class="container-fluid p-3 y-1 bg-dark text-white sticky-bottom">
+<div class="container-fluid p-3 y-1 bg-dark text-white fixed-bottom">
   <!-- Links for navs-->
     <ul class="nav justify-content-center">
       <li class="nav-item">
@@ -77,10 +130,11 @@
       <li class="nav-item">
         <a class="nav-link" href="contact.html"><i class="fab fa-facebook-square"></i></a>
       <li class="nav-item">
-        <a class="nav-link" href="contact.html"><i class="fab fa-pinterest-square"></i><a/>
+        <a class="nav-link" href="contact.html"><i class="fab fa-pinterest-square"></i></a>
       </li>
     </ul>
   </div>
 
+</body>
 
 </html>

@@ -1,7 +1,28 @@
 h1{
 font-family: "copperplate gothic", serif;
 }
+h2{
+font-family: "copperplate gothic", serif;
+}
+
 small{
   font-family: "copperplate gothic",serif;
   font-size: 18px;
 }
+.border{
+  border-style: double !important;
+  border-color: black !important;
+  border-width: thick !important;
+}
+/* credit for css to make SVG image clackable to noelmcg at stackexchange*/
+a.svg {
+  position: relative;
+  display: inline-block;
+}
+a.svg:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left:0;
